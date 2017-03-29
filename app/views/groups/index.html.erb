@@ -14,9 +14,9 @@
     <tbody>
       <% @groups.each do |group| %>
         <tr>
-          <td>#<td>
-          <td><%= link_to(group.film_title, group_path(group)) %></td>
-          <td><%= group.film_description %></td>
+          <td>#</td>
+          <td><%= link_to(group.file_name, group_path(group)) %></td>
+          <td><%= group.file_description %></td>
           <td>
             <%= link_to("Edit", edit_group_path(group), class: "btn btn-sm btn-default")%>
             <%= link_to("Delete", group_path(group), class:"btn btn-sm btn-default",
