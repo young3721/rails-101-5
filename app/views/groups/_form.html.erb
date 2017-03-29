@@ -1,18 +1,10 @@
-<%= form_for @group do |f| %>
-<% if @group.errors.any? %>
-<ul>
-  <% @group.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-  <% end %>
-</ul>
-<% end %>
-电影标题
-<%= f.text_field :file_name %>
-<br>
-电影简述
-<br>
-<%= f.text_area :file_description %>
-<br>
+<%= simple_form_for @group do |f| %>
 
-<%= f.submit "Submit", :disable_with => 'Submitting...'%>
+<div class="form-group">
+  <div class="form-group">
+    <%= f.input :file_name, input_html: { class: "form-control"} %>
+    <%= f.input :file_description, input_html: { class: "form-control"} %>
+  </div>
+</div>
+<%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..."} %>
 <% end %>
