@@ -17,7 +17,7 @@
         <tr>
           <td>#</td>
           <td><%= link_to(group.file_name, group_path(group)) %></td>
-          <td><%= group.file_description %></td>
+          <td><%= simple_format(group.file_description) %></td>
           <td><%= group.user.email %></td>
           <td>
           <% if current_user && current_user == group.user %>
